@@ -1,0 +1,1664 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trailmaker Chadanichowk | Educational Consultancy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #0e0e16;
+        --navy-2: #171733;
+        --ink: #2a2560;
+        --charcoal: #34343d;
+        --crimson: #d6274f;
+        --green: #33a95c;
+        --gold: #f2b807;
+        --sky: #1d9fd8;
+        --cream: #fbfaf7;
+        --paper: #f3f1ea;
+        --line: rgba(255, 255, 255, 0.12);
+        --line-dark: rgba(20, 20, 30, 0.1);
+        --shadow: 0 20px 50px -20px rgba(14, 14, 22, 0.35);
+        --radius: 18px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--charcoal);
+        background: var(--cream);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .display {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Inter";
+        font-weight: 700;
+        font-size: 12.5px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink);
+      }
+      .eyebrow::before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--gold);
+        display: inline-block;
+        border-radius: 2px;
+      }
+      button {
+        font-family: inherit;
+        cursor: pointer;
+        border: none;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 15px;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          background 0.25s ease;
+        white-space: nowrap;
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: #363435;
+      }
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -8px rgba(242, 184, 7, 0.55);
+      }
+      .btn-outline {
+        border: 1.5px solid rgba(255, 255, 255, 0.35);
+        color: #fff;
+        background: transparent;
+      }
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+      .btn-ink {
+        background: var(--ink);
+        color: #fff;
+      }
+      .btn-ink:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -8px rgba(42, 37, 96, 0.5);
+      }
+
+      /* ---------- NAV ---------- */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(14, 14, 22, 0.72);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+        transition: background 0.3s ease;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 28px;
+        max-width: 1180px;
+        margin: 0 auto;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+      .brand-word {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+      }
+      .brand-word .t1 {
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 19px;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+      .brand-word .t1 span {
+        color: var(--sky);
+      }
+      .brand-word .t2 {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 9.5px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-top: 3px;
+      }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+      }
+      .navlinks a {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 14.5px;
+        font-weight: 500;
+        position: relative;
+        padding: 4px 0;
+      }
+      .navlinks a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--gold);
+        transition: width 0.25s ease;
+      }
+      .navlinks a:hover::after {
+        width: 100%;
+      }
+      .navlinks a:hover {
+        color: #fff;
+      }
+      .navcta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .burger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+      }
+      .burger span {
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+      }
+
+      /* ---------- HERO ---------- */
+      .hero {
+        position: relative;
+        background: var(--navy);
+        padding: 168px 0 120px;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            680px 480px at 84% 8%,
+            rgba(29, 159, 216, 0.2),
+            transparent 60%
+          ),
+          radial-gradient(
+            560px 420px at 6% 92%,
+            rgba(214, 39, 79, 0.16),
+            transparent 60%
+          );
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 64px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero h1 {
+        font-size: clamp(34px, 4.6vw, 58px);
+        color: #fff;
+        line-height: 1.08;
+        margin-bottom: 22px;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--gold);
+      }
+      .hero p.lead {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 17.5px;
+        max-width: 490px;
+        line-height: 1.65;
+        margin-bottom: 34px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 52px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: flex;
+        gap: 34px;
+        flex-wrap: wrap;
+      }
+      .hstat b {
+        display: block;
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 26px;
+        color: #fff;
+      }
+      .hstat span {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.04em;
+      }
+      .hero-visual {
+        position: relative;
+        height: 460px;
+      }
+      .eyebrow.on-dark {
+        color: var(--gold);
+      }
+      .eyebrow.on-dark::before {
+        background: var(--sky);
+      }
+
+      /* trail svg */
+      .trail-svg {
+        width: 100%;
+        height: 100%;
+      }
+      .trail-path {
+        fill: none;
+        stroke: url(#trailGrad);
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-dasharray: 8 10;
+        animation: dashmove 26s linear infinite;
+      }
+      @keyframes dashmove {
+        to {
+          stroke-dashoffset: -1000;
+        }
+      }
+      .trail-node {
+        filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+      }
+      .trail-node circle.ring {
+        fill: none;
+        stroke: rgba(255, 255, 255, 0.25);
+        stroke-width: 1.4;
+      }
+      .trail-node text {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 11px;
+        fill: #0e0e16;
+      }
+      .trail-label {
+        font-family: "Inter";
+        font-weight: 600;
+        font-size: 12px;
+        fill: rgba(255, 255, 255, 0.78);
+      }
+
+      /* ---------- MARQUEE STRIP ---------- */
+      .strip {
+        background: var(--gold);
+        overflow: hidden;
+        padding: 12px 0;
+      }
+      .strip-track {
+        display: flex;
+        gap: 48px;
+        white-space: nowrap;
+        animation: scroll 26s linear infinite;
+        width: max-content;
+      }
+      .strip span {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 13.5px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #241a00;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .strip span::after {
+        content: "◆";
+        font-size: 9px;
+        opacity: 0.55;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ---------- SECTION GENERIC ---------- */
+      section {
+        padding: 104px 0;
+      }
+      .section-head {
+        max-width: 640px;
+        margin-bottom: 56px;
+      }
+      .section-head h2 {
+        font-size: clamp(28px, 3.4vw, 40px);
+        color: var(--ink);
+        margin: 14px 0 16px;
+        line-height: 1.15;
+      }
+      .section-head p {
+        color: #5a5a63;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ---------- SERVICES ---------- */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 22px;
+      }
+      .svc-card {
+        background: #fff;
+        border: 1px solid var(--line-dark);
+        border-radius: var(--radius);
+        padding: 30px 24px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .svc-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--accent, var(--sky));
+      }
+      .svc-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow);
+        border-color: transparent;
+      }
+      .svc-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        background: color-mix(in srgb, var(--accent, var(--sky)) 14%, white);
+      }
+      .svc-icon svg {
+        width: 22px;
+        height: 22px;
+        stroke: var(--accent, var(--sky));
+      }
+      .svc-card h3 {
+        font-size: 17.5px;
+        color: var(--ink);
+        margin-bottom: 9px;
+      }
+      .svc-card p {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+      }
+      .svc-card:nth-child(1) {
+        --accent: var(--crimson);
+      }
+      .svc-card:nth-child(2) {
+        --accent: var(--green);
+      }
+      .svc-card:nth-child(3) {
+        --accent: var(--gold);
+      }
+      .svc-card:nth-child(4) {
+        --accent: var(--sky);
+      }
+
+      /* ---------- PROCESS / TRAIL ---------- */
+      .process {
+        background: var(--navy-2);
+        color: #fff;
+        position: relative;
+      }
+      .process .section-head p {
+        color: rgba(255, 255, 255, 0.62);
+      }
+      .process .section-head h2 {
+        color: #fff;
+      }
+      .process-track {
+        position: relative;
+        margin-top: 20px;
+      }
+      .ptrack-svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .psteps {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .pstep {
+        padding: 0 6px;
+      }
+      .pstep .num {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 14px;
+        color: #0e0e16;
+        margin-bottom: 14px;
+      }
+      .pstep:nth-child(1) .num {
+        background: var(--crimson);
+        color: #fff;
+      }
+      .pstep:nth-child(2) .num {
+        background: var(--gold);
+      }
+      .pstep:nth-child(3) .num {
+        background: var(--sky);
+        color: #fff;
+      }
+      .pstep:nth-child(4) .num {
+        background: var(--green);
+        color: #fff;
+      }
+      .pstep:nth-child(5) .num {
+        background: #fff;
+      }
+      .pstep h4 {
+        font-size: 15.5px;
+        margin-bottom: 8px;
+        color: #fff;
+      }
+      .pstep p {
+        font-size: 13.3px;
+        color: rgba(255, 255, 255, 0.58);
+        line-height: 1.55;
+      }
+
+      /* ---------- DESTINATIONS ---------- */
+      .dest-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 16px;
+      }
+      .dest-card {
+        aspect-ratio: 3/3.6;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 16px;
+        color: #fff;
+        background: linear-gradient(160deg, var(--c1), var(--c2));
+        transition: transform 0.3s ease;
+      }
+      .dest-card:hover {
+        transform: translateY(-6px) scale(1.02);
+      }
+      .dest-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), transparent 55%);
+      }
+      .dest-card span {
+        position: relative;
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .dest-card small {
+        position: relative;
+        display: block;
+        font-size: 10.5px;
+        opacity: 0.8;
+        margin-top: 2px;
+        font-weight: 500;
+      }
+
+      /* ---------- WHY US ---------- */
+      .why {
+        background: var(--paper);
+      }
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .why-list {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+      }
+      .why-item {
+        display: flex;
+        gap: 16px;
+      }
+      .why-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-top: 8px;
+        flex-shrink: 0;
+      }
+      .why-item:nth-child(1) .why-dot {
+        background: var(--crimson);
+      }
+      .why-item:nth-child(2) .why-dot {
+        background: var(--green);
+      }
+      .why-item:nth-child(3) .why-dot {
+        background: var(--gold);
+      }
+      .why-item:nth-child(4) .why-dot {
+        background: var(--sky);
+      }
+      .why-item h4 {
+        font-size: 16.5px;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .why-item p {
+        font-size: 14px;
+        color: #5c5c64;
+        line-height: 1.6;
+      }
+      .why-panel {
+        background: var(--navy);
+        border-radius: 24px;
+        padding: 42px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .why-panel::after {
+        content: "";
+        position: absolute;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(29, 159, 216, 0.35),
+          transparent 70%
+        );
+        top: -90px;
+        right: -90px;
+      }
+      .why-panel .quote {
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.5;
+        position: relative;
+      }
+      .why-panel .who {
+        margin-top: 22px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+      }
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: conic-gradient(
+          var(--crimson),
+          var(--gold),
+          var(--green),
+          var(--sky),
+          var(--crimson)
+        );
+      }
+      .who b {
+        display: block;
+        font-size: 14px;
+      }
+      .who span {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      /* ---------- TESTIMONIALS ---------- */
+      .tgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .tcard {
+        background: #fff;
+        border: 1px solid var(--line-dark);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: 0 8px 30px -18px rgba(0, 0, 0, 0.18);
+      }
+      .tcard .stars {
+        color: var(--gold);
+        font-size: 14px;
+        margin-bottom: 14px;
+        letter-spacing: 2px;
+      }
+      .tcard p {
+        font-size: 14.5px;
+        color: #4c4c54;
+        line-height: 1.65;
+        margin-bottom: 20px;
+      }
+      .tcard .who {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .tcard .who b {
+        font-size: 13.5px;
+        color: var(--ink);
+        display: block;
+      }
+      .tcard .who span {
+        font-size: 12px;
+        color: #8a8a90;
+      }
+
+      /* ---------- CTA BAND ---------- */
+      .ctaband {
+        background: linear-gradient(
+          120deg,
+          var(--ink),
+          #241a52 60%,
+          var(--ink)
+        );
+        color: #fff;
+        border-radius: 28px;
+        padding: 56px 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        position: relative;
+        overflow: hidden;
+        margin: 0 28px;
+      }
+      .ctaband::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          420px 260px at 90% 0%,
+          rgba(242, 184, 7, 0.25),
+          transparent 60%
+        );
+      }
+      .ctaband h3 {
+        font-size: clamp(22px, 2.6vw, 30px);
+        position: relative;
+        max-width: 520px;
+        line-height: 1.25;
+      }
+      .ctaband .cta-actions {
+        position: relative;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      /* ---------- FOOTER ---------- */
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.7);
+        padding: 72px 0 26px;
+      }
+      .foot-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+        gap: 44px;
+        margin-bottom: 56px;
+      }
+      .foot-brand p {
+        font-size: 13.8px;
+        line-height: 1.7;
+        margin-top: 16px;
+        max-width: 280px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+      .foot-col h5 {
+        color: #fff;
+        font-size: 13.5px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .foot-col a {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 11px;
+        color: rgba(255, 255, 255, 0.62);
+        transition: color 0.2s;
+      }
+      .foot-col a:hover {
+        color: var(--gold);
+      }
+      .foot-bottom {
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.4);
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+      .social a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .social a:hover {
+        background: var(--gold);
+        border-color: var(--gold);
+      }
+      .social svg {
+        width: 15px;
+        height: 15px;
+        stroke: #fff;
+      }
+      .social a:hover svg {
+        stroke: #0e0e16;
+      }
+
+      /* ---------- COUNTERS BAR ---------- */
+      .stats-bar {
+        background: #fff;
+        border-top: 1px solid var(--line-dark);
+        border-bottom: 1px solid var(--line-dark);
+      }
+      .stats-inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        padding: 44px 0;
+      }
+      .stats-inner div {
+        border-right: 1px solid var(--line-dark);
+      }
+      .stats-inner div:last-child {
+        border-right: none;
+      }
+      .stats-inner b {
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 30px;
+        display: block;
+      }
+      .stats-inner div:nth-child(1) b {
+        color: var(--crimson);
+      }
+      .stats-inner div:nth-child(2) b {
+        color: var(--green);
+      }
+      .stats-inner div:nth-child(3) b {
+        color: var(--gold);
+      }
+      .stats-inner div:nth-child(4) b {
+        color: var(--sky);
+      }
+      .stats-inner span {
+        font-size: 12.5px;
+        color: #77777d;
+        letter-spacing: 0.03em;
+      }
+
+      /* ---------- RESPONSIVE ---------- */
+      @media (max-width: 980px) {
+        .navlinks {
+          position: fixed;
+          top: 64px;
+          left: 0;
+          right: 0;
+          background: rgba(14, 14, 22, 0.98);
+          flex-direction: column;
+          padding: 26px 28px;
+          gap: 20px;
+          transform: translateY(-140%);
+          transition: transform 0.3s ease;
+          border-bottom: 1px solid var(--line);
+        }
+        .navlinks.open {
+          transform: translateY(0);
+        }
+        .navcta .btn-outline {
+          display: none;
+        }
+        .burger {
+          display: flex;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .hero p.lead {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-actions {
+          justify-content: center;
+        }
+        .hero-stats {
+          justify-content: center;
+        }
+        .hero-visual {
+          height: 320px;
+        }
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .psteps {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .dest-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .tgrid {
+          grid-template-columns: 1fr;
+        }
+        .foot-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stats-inner {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 26px;
+        }
+        .stats-inner div:nth-child(odd) {
+          border-right: 1px solid var(--line-dark);
+        }
+        .stats-inner div:nth-child(2) {
+          border-right: none;
+        }
+        .ctaband {
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+        }
+      }
+      @media (max-width: 600px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .dest-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .psteps {
+          grid-template-columns: 1fr;
+        }
+        .foot-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .trail-path,
+        .strip-track {
+          animation: none;
+        }
+        .reveal {
+          transition: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header>
+      <nav class="nav">
+        <a href="#top" class="brand">
+          <svg width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="52" r="40" fill="none" />
+            <path
+              d="M50 12 A40 40 0 0 1 50 92 A20 20 0 0 1 50 52 A20 20 0 0 0 50 12Z"
+              fill="#d6274f"
+            />
+            <path
+              d="M50 12 A40 40 0 0 1 90 52 A40 40 0 0 1 50 92 A20 20 0 0 0 50 52 A20 20 0 0 0 50 12Z"
+              fill="#33a95c"
+            />
+            <circle cx="50" cy="34" r="9" fill="#d6274f" />
+            <circle cx="50" cy="34" r="9" fill="#33a95c" opacity="0" />
+            <circle cx="50" cy="58" r="9" fill="#f2b807" />
+            <circle cx="34" cy="30" r="6" fill="#d6274f" />
+            <circle cx="66" cy="30" r="6" fill="#33a95c" />
+            <path
+              d="M50 66 C42 66 34 74 32 84 C40 88 46 86 50 78 C54 86 60 88 68 84 C66 74 58 66 50 66Z"
+              fill="#1d9fd8"
+            />
+            <rect x="18" y="6" width="64" height="9" rx="2" fill="#2c2c33" />
+            <path d="M50 -2 L92 12 L50 26 L8 12 Z" fill="#2c2c33" />
+          </svg>
+          <span class="brand-word">
+            <span class="t1">Trail<span>maker</span></span>
+            <span class="t2">Chadanichowk Consultancy</span>
+          </span>
+        </a>
+        <div class="navlinks" id="navlinks">
+          <a href="#services">Services</a>
+          <a href="#process">Your Trail</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#why">Why Us</a>
+          <a href="#testimonials">Stories</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="navcta">
+          <a
+            href="#contact"
+            class="btn btn-outline"
+            style="padding: 11px 20px; font-size: 13.5px"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-gold"
+            style="padding: 11px 22px; font-size: 13.5px"
+            >Book Free Consultation</a
+          >
+          <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow on-dark">Study Abroad · Since 2014</span>
+          <h1>We map the trail<br />to your <em>global</em> future.</h1>
+          <p class="lead">
+            Trailmaker Chadanichowk turns "which country, which university" into
+            a clear, walkable path — from counseling and test prep to visa and
+            departure, guided every step by advisors who've made this trip
+            before.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-gold">Book a free consultation</a>
+            <a href="#process" class="btn btn-outline">See how it works</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat">
+              <b id="cnt-students">0</b><span>Students placed</span>
+            </div>
+            <div class="hstat">
+              <b id="cnt-countries">0</b><span>Partner countries</span>
+            </div>
+            <div class="hstat">
+              <b id="cnt-rate">0%</b><span>Visa success rate</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <svg
+            class="trail-svg"
+            viewBox="0 0 420 460"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="trailGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#d6274f" />
+                <stop offset="35%" stop-color="#f2b807" />
+                <stop offset="65%" stop-color="#33a95c" />
+                <stop offset="100%" stop-color="#1d9fd8" />
+              </linearGradient>
+            </defs>
+            <path
+              class="trail-path"
+              d="M40 420 C 100 400, 60 320, 130 300 C 210 278, 190 200, 260 175 C 320 154, 300 90, 370 55"
+            />
+            <g class="trail-node">
+              <circle cx="40" cy="420" r="17" fill="#d6274f" />
+              <circle class="ring" cx="40" cy="420" r="24" />
+              <text x="40" y="424" text-anchor="middle">NP</text>
+              <text class="trail-label" x="66" y="424">
+                Home &amp; counseling
+              </text>
+            </g>
+            <g class="trail-node">
+              <circle cx="130" cy="300" r="17" fill="#f2b807" />
+              <circle class="ring" cx="130" cy="300" r="24" />
+              <text x="130" y="304" text-anchor="middle">TP</text>
+              <text class="trail-label" x="156" y="304">Test prep</text>
+            </g>
+            <g class="trail-node">
+              <circle cx="260" cy="175" r="17" fill="#33a95c" />
+              <circle class="ring" cx="260" cy="175" r="24" />
+              <text x="260" y="179" text-anchor="middle">AP</text>
+              <text class="trail-label" x="286" y="179">Application</text>
+            </g>
+            <g class="trail-node">
+              <circle cx="370" cy="55" r="19" fill="#1d9fd8" />
+              <circle class="ring" cx="370" cy="55" r="27" />
+              <text x="370" y="60" text-anchor="middle" style="font-size: 12px">
+                ✈
+              </text>
+            </g>
+            <text class="trail-label" x="300" y="30" style="font-weight: 700">
+              Destination
+            </text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE STRIP ================= -->
+    <div class="strip">
+      <div class="strip-track">
+        <span>Australia</span><span>United Kingdom</span
+        ><span>United States</span><span>Canada</span><span>Japan</span
+        ><span>South Korea</span><span>New Zealand</span><span>Germany</span>
+        <span>Australia</span><span>United Kingdom</span
+        ><span>United States</span><span>Canada</span><span>Japan</span
+        ><span>South Korea</span><span>New Zealand</span><span>Germany</span>
+      </div>
+    </div>
+
+    <!-- ================= STATS BAR ================= -->
+    <div class="stats-bar">
+      <div class="wrap stats-inner">
+        <div><b id="s1">0</b><span>Years guiding students</span></div>
+        <div><b id="s2">0</b><span>Partner universities</span></div>
+        <div><b id="s3">0</b><span>Offers secured / year</span></div>
+        <div><b id="s4">0</b><span>Advisors on our team</span></div>
+      </div>
+    </div>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we do</span>
+          <h2>Every stage of the journey, covered.</h2>
+          <p>
+            From the first "where should I even apply" conversation to the day
+            you land, our advisors carry the file — so nothing slips between
+            counseling, testing, and paperwork.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="svc-card reveal">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M12 3 2 8l10 5 10-5-10-5Z" />
+                <path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5" />
+              </svg>
+            </div>
+            <h3>Study abroad counseling</h3>
+            <p>
+              One-on-one profile assessment to match your goals, budget, and
+              grades to the right country and course.
+            </p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path
+                  d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"
+                />
+                <path d="M9 13h6M9 17h6M9 9h2" />
+              </svg>
+            </div>
+            <h3>IELTS / PTE / SAT prep</h3>
+            <p>
+              Small-batch and one-to-one classes with mock tests, taught by
+              trainers who track your score weekly.
+            </p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="m9 12 2 2 4-4" />
+                <circle cx="12" cy="12" r="9" />
+              </svg>
+            </div>
+            <h3>Application &amp; scholarships</h3>
+            <p>
+              SOPs, LORs, and forms handled end-to-end, plus a search for
+              scholarships you actually qualify for.
+            </p>
+          </div>
+          <div class="svc-card reveal">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <rect x="3" y="4" width="18" height="16" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+            </div>
+            <h3>Visa &amp; pre-departure</h3>
+            <p>
+              Mock interviews, document checks, and a briefing on housing,
+              insurance, and life in your new city.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS / TRAIL ================= -->
+    <section class="process" id="process">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow on-dark">Your trail</span>
+          <h2>Five checkpoints from Chadanichowk to campus.</h2>
+          <p>
+            We call it a trail because that's what it is — a marked, walkable
+            route with a person beside you at every checkpoint.
+          </p>
+        </div>
+        <div class="process-track reveal">
+          <svg
+            class="ptrack-svg"
+            viewBox="0 0 1000 60"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="40"
+              y1="30"
+              x2="960"
+              y2="30"
+              stroke="rgba(255,255,255,.18)"
+              stroke-width="2"
+              stroke-dasharray="2 10"
+              stroke-linecap="round"
+            />
+          </svg>
+          <div class="psteps">
+            <div class="pstep">
+              <div class="num">1</div>
+              <h4>Discover</h4>
+              <p>
+                Free counseling session to map interests, budget, and target
+                intake.
+              </p>
+            </div>
+            <div class="pstep">
+              <div class="num">2</div>
+              <h4>Prepare</h4>
+              <p>
+                Test prep and document collection running in parallel to save
+                months.
+              </p>
+            </div>
+            <div class="pstep">
+              <div class="num">3</div>
+              <h4>Apply</h4>
+              <p>
+                Shortlist submitted to 4–6 universities with SOPs tailored to
+                each.
+              </p>
+            </div>
+            <div class="pstep">
+              <div class="num">4</div>
+              <h4>Secure</h4>
+              <p>
+                Offer letters compared, funds arranged, visa file built and
+                reviewed.
+              </p>
+            </div>
+            <div class="pstep">
+              <div class="num">5</div>
+              <h4>Depart</h4>
+              <p>
+                Pre-departure briefing, airport pickup partner, and check-ins
+                abroad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESTINATIONS ================= -->
+    <section id="destinations">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where you could go</span>
+          <h2>Destinations our students are studying in right now.</h2>
+          <p>
+            We only counsel toward universities we've placed students in before
+            — so the advice is lived experience, not a brochure.
+          </p>
+        </div>
+        <div class="dest-grid reveal">
+          <div class="dest-card" style="--c1: #d6274f; --c2: #7a1230">
+            <span>Australia</span><small>120+ students</small>
+          </div>
+          <div class="dest-card" style="--c1: #1d9fd8; --c2: #0d3f5c">
+            <span>United Kingdom</span><small>95+ students</small>
+          </div>
+          <div class="dest-card" style="--c1: #33a95c; --c2: #12522a">
+            <span>Canada</span><small>140+ students</small>
+          </div>
+          <div class="dest-card" style="--c1: #f2b807; --c2: #7a5c03">
+            <span>United States</span><small>60+ students</small>
+          </div>
+          <div class="dest-card" style="--c1: #2a2560; --c2: #15112f">
+            <span>Japan</span><small>40+ students</small>
+          </div>
+          <div class="dest-card" style="--c1: #34343d; --c2: #151519">
+            <span>South Korea</span><small>25+ students</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY US ================= -->
+    <section class="why" id="why">
+      <div class="wrap why-grid">
+        <div>
+          <div class="section-head reveal" style="margin-bottom: 34px">
+            <span class="eyebrow">Why families choose us</span>
+            <h2>Straight answers, not a sales pitch.</h2>
+          </div>
+          <div class="why-list reveal">
+            <div class="why-item">
+              <span class="why-dot"></span>
+              <div>
+                <h4>Licensed and registered consultancy</h4>
+                <p>
+                  Registered under the Company Act with certified counselors —
+                  verify us before you enroll anywhere.
+                </p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-dot"></span>
+              <div>
+                <h4>One advisor, start to finish</h4>
+                <p>
+                  The person who counsels you is the same one who reviews your
+                  visa file — no handoffs, no repeating your story.
+                </p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-dot"></span>
+              <div>
+                <h4>Transparent fees, in writing</h4>
+                <p>
+                  Every charge is listed before you sign — no surprise
+                  "processing fees" later in the trail.
+                </p>
+              </div>
+            </div>
+            <div class="why-item">
+              <span class="why-dot"></span>
+              <div>
+                <h4>Support doesn't end at the airport</h4>
+                <p>
+                  Our alumni network and local partners check in during your
+                  first semester abroad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-panel reveal">
+          <p class="quote">
+            "They didn't just fill out my forms — they told me which
+            universities weren't worth the fee. That honesty is why I trusted
+            them with my visa file."
+          </p>
+          <div class="who">
+            <div class="avatar"></div>
+            <div>
+              <b>Aastha Rai</b
+              ><span>MSc Data Science, University of Melbourne</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="testimonials">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Student stories</span>
+          <h2>Real trails, walked by real students.</h2>
+        </div>
+        <div class="tgrid reveal">
+          <div class="tcard">
+            <div class="stars">★★★★★</div>
+            <p>
+              My IELTS score was stuck at 5.5 for months. The trainers here
+              rebuilt my writing from scratch — I hit 7.0 in six weeks.
+            </p>
+            <div class="who">
+              <div>
+                <b>Suman Thapa</b><span>BSc Computer Science, Toronto</span>
+              </div>
+            </div>
+          </div>
+          <div class="tcard">
+            <div class="stars">★★★★★</div>
+            <p>
+              I walked in confused about which country even suited my budget. I
+              walked out with a shortlist and a plan I actually understood.
+            </p>
+            <div class="who">
+              <div>
+                <b>Prakriti Basnet</b><span>BBA, University of Auckland</span>
+              </div>
+            </div>
+          </div>
+          <div class="tcard">
+            <div class="stars">★★★★★</div>
+            <p>
+              My visa was refused once elsewhere. Trailmaker rebuilt the file
+              properly and it was approved on the second attempt.
+            </p>
+            <div class="who">
+              <div>
+                <b>Nabin Karki</b><span>MEng, University of Manchester</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA BAND ================= -->
+    <section style="padding-top: 0">
+      <div class="ctaband reveal">
+        <h3>
+          Ready to see your own trail mapped out? Your first consultation is
+          free.
+        </h3>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-gold">Book free consultation</a>
+          <a href="tel:+9779800000000" class="btn btn-outline"
+            >Call +977 98-0000-0000</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT / FOOTER ================= -->
+    <footer id="contact">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <div class="brand" style="gap: 10px">
+              <svg
+                width="34"
+                height="34"
+                viewBox="0 0 100 100"
+                aria-hidden="true"
+              >
+                <path
+                  d="M50 12 A40 40 0 0 1 50 92 A20 20 0 0 1 50 52 A20 20 0 0 0 50 12Z"
+                  fill="#d6274f"
+                />
+                <path
+                  d="M50 12 A40 40 0 0 1 90 52 A40 40 0 0 1 50 92 A20 20 0 0 0 50 52 A20 20 0 0 0 50 12Z"
+                  fill="#33a95c"
+                />
+                <circle cx="50" cy="58" r="9" fill="#f2b807" />
+                <path
+                  d="M50 66 C42 66 34 74 32 84 C40 88 46 86 50 78 C54 86 60 88 68 84 C66 74 58 66 50 66Z"
+                  fill="#1d9fd8"
+                />
+              </svg>
+              <span
+                class="t1"
+                style="
+                  font-family: &quot;Poppins&quot;;
+                  font-weight: 800;
+                  font-size: 18px;
+                  color: #fff;
+                "
+                >Trail<span class="t2" style="color: #363435">maker</span></span
+              >
+            </div>
+            <p>
+              Trailmaker Chadanichowk Educational Consultancy Pvt. Ltd. helps
+              Nepali students plan, prepare, and depart for study abroad — with
+              one advisor guiding the whole trail.
+            </p>
+            <div class="social" style="margin-top: 20px">
+              <a href="#" aria-label="Facebook"
+                ><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <path
+                    d="M14 9h3V6h-3a3 3 0 0 0-3 3v2H9v3h2v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1Z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" /></svg
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                  <rect x="2" y="6" width="20" height="12" rx="3" />
+                  <path d="m10 9 5 3-5 3V9Z" fill="#fff" stroke="none" /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="foot-col">
+            <h5>Explore</h5>
+            <a href="#services">Services</a>
+            <a href="#process">Your trail</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#why">Why us</a>
+          </div>
+          <div class="foot-col">
+            <h5>Destinations</h5>
+            <a href="#destinations">Australia</a>
+            <a href="#destinations">United Kingdom</a>
+            <a href="#destinations">Canada</a>
+            <a href="#destinations">Japan</a>
+          </div>
+          <div class="foot-col">
+            <h5>Visit us</h5>
+            <a href="#" style="pointer-events: none">Chadanichowk, Nepal</a>
+            <a href="tel:+9779800000000">+977 98-0000-0000</a>
+            <a href="mailto:hello@trailmakerconsultancy.com"
+              >hello@trailmakerconsultancy.com</a
+            >
+            <a href="#" style="pointer-events: none">Sun – Fri, 10am – 5pm</a>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span
+            >© 2026 Trailmaker Chadanichowk Educational Consultancy Pvt. Ltd.
+            All rights reserved.</span
+          >
+          <span>Designed to mark the trail, not just the destination.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // mobile nav
+      const burger = document.getElementById("burger");
+      const navlinks = document.getElementById("navlinks");
+      burger.addEventListener("click", () => navlinks.classList.toggle("open"));
+      navlinks
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => navlinks.classList.remove("open")),
+        );
+
+      // scroll reveal
+      const revealEls = document.querySelectorAll(".reveal");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      revealEls.forEach((el) => io.observe(el));
+
+      // animated counters
+      function animateCount(el, target, suffix = "", duration = 1600) {
+        const start = performance.now();
+        function tick(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+      const counters = [
+        { id: "cnt-students", val: 2400, suf: "+" },
+        { id: "cnt-countries", val: 8, suf: "" },
+        { id: "cnt-rate", val: 96, suf: "%" },
+        { id: "s1", val: 11, suf: "+" },
+        { id: "s2", val: 60, suf: "+" },
+        { id: "s3", val: 850, suf: "+" },
+        { id: "s4", val: 14, suf: "" },
+      ];
+      let counted = false;
+      const heroIO = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting && !counted) {
+              counted = true;
+              counters.forEach((c) => {
+                const el = document.getElementById(c.id);
+                if (el) animateCount(el, c.val, c.suf);
+              });
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+      heroIO.observe(document.querySelector(".hero"));
+      const statsIO = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              counters.slice(3).forEach((c) => {
+                const el = document.getElementById(c.id);
+                if (el) animateCount(el, c.val, c.suf);
+              });
+              statsIO.disconnect();
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+      statsIO.observe(document.querySelector(".stats-bar"));
+
+      // header background on scroll
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        header.style.background =
+          window.scrollY > 40 ? "rgba(14,14,22,0.92)" : "rgba(14,14,22,0.72)";
+      });
+    </script>
+  </body>
+</html>
