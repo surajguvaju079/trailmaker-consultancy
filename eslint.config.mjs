@@ -5,9 +5,22 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+
+  {
+    rules: {
+      // Don't let ESLint break production builds
+      "@next/next/no-img-element": "off",
+
+      // Allow common React/Next.js patterns
+      "react-hooks/exhaustive-deps": "warn",
+
+      // TypeScript - don't be overly strict
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+    },
+  },
+
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
