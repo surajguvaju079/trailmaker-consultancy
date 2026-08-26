@@ -1,41 +1,68 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
   weight: ["500", "600", "700", "800"],
   subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 const inter = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-inter",
 });
 
+const siteUrl = "https://www.trailmakerchadanichowk.com.np";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
   title: {
-    default: "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
-    template: "| Trailmaker Consultancy",
+    default:
+      "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
+    template: "%s | Trailmaker Consultancy",
   },
+
   description:
     "Trailmaker Consultancy helps Nepali students study abroad — from counselling and test preparation to university applications, visa guidance and pre-departure support.",
-  keywords: "study abroad, education consultancy, Nepal, student visa, IELTS, PTE, TOEFL, university application, scholarship",
+
+  keywords: [
+    "study abroad",
+    "education consultancy",
+    "Nepal",
+    "student visa",
+    "IELTS",
+    "PTE",
+    "TOEFL",
+    "university application",
+    "scholarship",
+  ],
+
   authors: [{ name: "Trailmaker Consultancy" }],
-  creators: [{ name: "Trailmaker Consultancy" }],
+  creator: "Trailmaker Consultancy",
   publisher: "Trailmaker Consultancy",
-  format: "website",
-  viewport: "width=device-width, initial-scale=1",
+
   robots: {
     index: true,
     follow: true,
-    googlebot: "index, follow",
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
-  metadataBase: new URL("https://www.trailmakerchadanichowk.com.np"),
+
+  alternates: {
+    canonical: siteUrl,
+  },
+
   openGraph: {
-    title: "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
+    title:
+      "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
     description:
       "Trailmaker Consultancy helps Nepali students study abroad — from counselling and test preparation to university applications, visa guidance and pre-departure support.",
-    url: "https://www.trailmakerchadanichowk.com.np",
+    url: siteUrl,
     siteName: "Trailmaker Consultancy",
     images: [
       {
@@ -48,47 +75,50 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NP",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
+    title:
+      "Trailmaker Consultancy | Study Abroad & Education Consultancy in Nepal",
     description:
       "Trailmaker Consultancy helps Nepali students study abroad — from counselling and test preparation to university applications, visa guidance and pre-departure support.",
     images: ["/logo.jpeg"],
     creator: "@trailmakernp",
   },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
 };
 
-const jsonLd = `
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Trailmaker Consultancy",
-    "url": "https://www.trailmakerchadanichowk.com.np",
-    "logo": "/logo.jpeg",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+977-98-0000-0000",
-      "contactType": "customer service"
-    },
-    "sameAs": [
-      "https://www.facebook.com/trailmakerconsultancy",
-      "https://www.instagram.com/trailmakerconsultancy"
-    ]
-  }
-  }
-  </script>
-`;
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Trailmaker Consultancy",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.jpeg`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+977-98-0000-0000",
+    contactType: "customer service",
+  },
+  sameAs: [
+    "https://www.facebook.com/trailmakerconsultancy",
+    "https://www.instagram.com/trailmakerconsultancy",
+  ],
+};
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html
       lang="en"
@@ -96,7 +126,13 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         {children}
-        {jsonLd}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
       </body>
     </html>
   );
