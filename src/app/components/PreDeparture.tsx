@@ -5,7 +5,7 @@ export function PreDeparture() {
         <div className="section-head reveal">
           <h2>Pre-departure support</h2>
           <p>
-            We don't just help you get to your destination — we help you settle in.
+            We &apos;t just help you get to your destination — we help you settle in.
           </p>
         </div>
         <div className="reveal">

@@ -8,7 +8,7 @@ export function Process() {
           <span className="eyebrow on-dark">Your trail</span>
           <h2>Five checkpoints from Chadanichowk to campus.</h2>
           <p>
-            We call it a trail because that's what it is — a marked, walkable
+            We call it a trail because that&apos;s what it is — a marked, walkable
             route with a person beside you at every checkpoint.
           </p>
         </div>
