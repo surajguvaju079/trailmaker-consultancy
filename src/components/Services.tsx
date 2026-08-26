@@ -6,7 +6,7 @@ export function Services() {
           <span className="eyebrow">What we do</span>
           <h2>Every stage of the journey, covered.</h2>
           <p>
-            From the first "where should I even apply" conversation to the day
+            From the first conversation about where to apply to the day
             you land, our advisors carry the file — so nothing slips between
             counseling, testing, and paperwork.
           </p>

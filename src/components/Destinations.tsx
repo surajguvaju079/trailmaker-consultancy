@@ -6,7 +6,7 @@ export function Destinations() {
           <span className="eyebrow">Where you could go</span>
           <h2>Destinations our students are studying in right now.</h2>
           <p>
-            We only counsel toward universities we've placed students in before
+            We only counsel toward universities we&apos;ve placed students in before
             — so the advice is lived experience, not a brochure.
           </p>
         </div>

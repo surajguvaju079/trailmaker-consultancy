@@ -42,7 +42,7 @@ export function WhyUs() {
             <div className="why-item">
               <span className="why-dot"></span>
               <div>
-                <h4>Support doesn&apos;t end at the airport</h4>
+                <h4>Support doesn't end at the airport</h4>
                 <p>
                   Our alumni network and local partners check in during your
                   first semester abroad.
@@ -51,21 +51,7 @@ export function WhyUs() {
             </div>
           </div>
         </div>
-        <div className="why-panel reveal">
-          <p className="quote">
-            "They didn't just fill out my forms — they told me which
-            universities weren't worth the fee. That honesty is why I trusted
-            them with my visa file."
-          </p>
-          <div className="who">
-            <div className="avatar"></div>
-            <div>
-              <b>Aastha Rai</b><span>MSc Data Science, University of Melbourne</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
- {/* eslint-enable react/no-unescaped-entities */}
