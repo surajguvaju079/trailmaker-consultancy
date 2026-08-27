@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export function GET() {
   const baseUrl = "https://www.trailmakerchadanichowk.com.np";
-  
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
       <url>
