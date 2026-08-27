@@ -83,9 +83,9 @@ export function Hero() {
           <span className="eyebrow on-dark">Study Abroad · Since 2014</span>
           <h1>We map the trail<br />to your <em>global</em> future.</h1>
           <p className="lead">
-            Trailmaker Chadanichowk turns "which country, which university" into
+            Trailmaker Chadanichowk turns which country, which university into
             a clear, walkable path — from counseling and test prep to visa and
-            departure, guided every step by advisors who've made this trip
+            departure, guided every step by advisors who made this trip
             before.
           </p>
           <div className="hero-actions">

@@ -11,6 +11,10 @@ import { CtaBand } from "./components/CtaBand";
 import { Footer } from "./components/Footer";
 import { Interactions } from "./components/Interactions";
 import { StatsBar } from "./components/StatsBar";
+import { TestPreparation } from "./components/TestPreparation";
+import { ScholarshipGuidance } from "./components/ScholarshipGuidance";
+import { PreDeparture } from "./components/PreDeparture";
+import { StudentJourney } from "./components/StudentJourney";
 
 export default function Home() {
   return (
@@ -20,10 +24,13 @@ export default function Home() {
       <MarqueeStrip />
       <StatsBar />
       <Services />
-      <Process />
+      <StudentJourney />
       <Destinations />
       <WhyUs />
       <Testimonials />
+      <TestPreparation />
+      <ScholarshipGuidance />
+      <PreDeparture />
       <CtaBand />
       <Footer />
       <Interactions />

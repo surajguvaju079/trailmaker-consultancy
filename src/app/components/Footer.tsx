@@ -68,12 +68,24 @@ export function Footer() {
           </div>
           <div className="foot-col">
             <h5>Visit us</h5>
-            <a href="#" style={{ pointerEvents: "none" }}>Chadanichowk, Nepal</a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Chadanichowk+Nepal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chadanichowk, Nepal
+            </a>
             <a href="tel:+9779800000000">+977 98-0000-0000</a>
             <a href="mailto:hello@trailmakerconsultancy.com"
               >hello@trailmakerconsultancy.com</a
             >
-            <a href="#" style={{ pointerEvents: "none" }}>Sun – Fri, 10am – 5pm</a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=travel+consultancy+Chadanichowk+Nepal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Sun – Fri, 10am – 5pm
+            </a>
           </div>
         </div>
         <div className="foot-bottom">

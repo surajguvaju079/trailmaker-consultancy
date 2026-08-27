@@ -34,14 +34,14 @@ export function WhyUs() {
                 <h4>Transparent fees, in writing</h4>
                 <p>
                   Every charge is listed before you sign — no surprise
-                  "processing fees" later in the trail.
+                  processing fees later in the trail.
                 </p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-dot"></span>
               <div>
-                <h4>Support doesn't end at the airport</h4>
+                <h4>Support does not end at the airport</h4>
                 <p>
                   Our alumni network and local partners check in during your
                   first semester abroad.
@@ -52,9 +52,9 @@ export function WhyUs() {
         </div>
         <div className="why-panel reveal">
           <p className="quote">
-            "They didn't just fill out my forms — they told me which
-            universities weren't worth the fee. That honesty is why I trusted
-            them with my visa file."
+            They guided my application — they told me which universities
+            were not worth the fee. That honesty is why I trusted
+            them with my visa file.
           </p>
           <div className="who">
             <div className="avatar"></div>

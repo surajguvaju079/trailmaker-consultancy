@@ -34,7 +34,7 @@ export function Services() {
                 <path d="M9 13h6M9 17h6M9 9h2" />
               </svg>
             </div>
-            <h3>IELTS / PTE / SAT prep</h3>
+            <h3>Test preparation</h3>
             <p>
               Small-batch and one-to-one classes with mock tests, taught by
               trainers who track your score weekly.

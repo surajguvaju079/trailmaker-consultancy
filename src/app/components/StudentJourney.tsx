@@ -1,9 +1,9 @@
-export function Process() {
+export function StudentJourney() {
   return (
-    <section className="process" id="process">
+    <section id="student-journey">
       <div className="wrap">
         <div className="section-head reveal">
-          <span className="eyebrow on-dark">Your trail</span>
+          <span className="eyebrow">Your trail</span>
           <h2>Five checkpoints from Chadanichowk to campus.</h2>
           <p>
             We call it a trail because that is what it is — a marked, walkable
@@ -24,7 +24,7 @@ export function Process() {
               y2="30"
               stroke="rgba(255,255,255,.18)"
               strokeWidth="2"
-              StrokeDasharray="2 10"
+              strokeDasharray="2 10"
               strokeLinecap="round"
             />
           </svg>
