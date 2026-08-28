@@ -22,7 +22,7 @@ export function Header() {
           />
           <span className="brand-word">
             <span className="t1">Trail<span>maker</span></span>
-            <span className="t2">Chadanichowk Consultancy</span>
+            <span className="t2">Trailmaker Consultancy</span>
           </span>
         </a>
         <div className="navlinks" id="navlinks">
