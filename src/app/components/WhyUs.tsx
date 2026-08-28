@@ -1,5 +1,4 @@
 export function WhyUs() {
-  {/* eslint-disable react/no-unescaped-entities */}
   return (
     <section className="why" id="why">
       <div className="wrap why-grid">
@@ -35,14 +34,14 @@ export function WhyUs() {
                 <h4>Transparent fees, in writing</h4>
                 <p>
                   Every charge is listed before you sign — no surprise
-                  "processing fees" later in the trail.
+                  processing fees later in the trail.
                 </p>
               </div>
             </div>
             <div className="why-item">
               <span className="why-dot"></span>
               <div>
-                <h4>Support doesn't end at the airport</h4>
+                <h4>Support does not end at the airport</h4>
                 <p>
                   Our alumni network and local partners check in during your
                   first semester abroad.

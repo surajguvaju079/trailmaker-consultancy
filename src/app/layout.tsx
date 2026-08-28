@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -37,11 +37,9 @@ export const metadata: Metadata = {
     "PTE",
     "TOEFL",
     "university application",
-    "scholarship",
   ],
 
   authors: [{ name: "Trailmaker Consultancy" }],
-  creator: "Trailmaker Consultancy",
   publisher: "Trailmaker Consultancy",
 
   robots: {
@@ -83,18 +81,12 @@ export const metadata: Metadata = {
     description:
       "Trailmaker Consultancy helps Nepali students study abroad — from counselling and test preparation to university applications, visa guidance and pre-departure support.",
     images: ["/logo.jpeg"],
-    creator: "@trailmakernp",
   },
 
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
 };
 
 const jsonLd = {
@@ -105,12 +97,11 @@ const jsonLd = {
   logo: `${siteUrl}/logo.jpeg`,
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+977-98-0000-0000",
+    telephone: "+977-11-664371",
     contactType: "customer service",
   },
   sameAs: [
-    "https://www.facebook.com/trailmakerconsultancy",
-    "https://www.instagram.com/trailmakerconsultancy",
+    "https://www.facebook.com/people/Trailmaker-Chadanichowk-educational-consultancy-Banepa/100065606254468/",
   ],
 };
 
