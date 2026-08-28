@@ -1,12 +1,11 @@
 export function Process() {
   { }
-  {/* eslint-disable react/no-unescaped-entities */}
   return (
     <section className="process" id="process">
       <div className="wrap">
         <div className="section-head reveal">
           <span className="eyebrow on-dark">Your trail</span>
-          <h2>Five checkpoints from Chadanichowk to campus.</h2>
+          <h2>Five checkpoints from Banepa to campus.</h2>
           <p>
             We call it a trail because that&apos;s what it is — a marked, walkable
             route with a person beside you at every checkpoint.
@@ -66,7 +65,7 @@ export function Process() {
             <div className="pstep">
               <div className="num">5</div>
               <h4>Depart</h4>
-              <p>
+<p>
                 Pre-departure briefing, airport pickup partner, and check-ins
                 abroad.
               </p>
@@ -77,4 +76,3 @@ export function Process() {
     </section>
   );
 }
-/* eslint-enable react/no-unescaped-entities */

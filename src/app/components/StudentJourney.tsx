@@ -4,7 +4,7 @@ export function StudentJourney() {
       <div className="wrap">
         <div className="section-head reveal">
           <span className="eyebrow">Your trail</span>
-          <h2>Five checkpoints from Chadanichowk to campus.</h2>
+          <h2>Five checkpoints from Banepa to campus.</h2>
           <p>
             We call it a trail because that is what it is — a marked, walkable
             route with a person beside you at every checkpoint.

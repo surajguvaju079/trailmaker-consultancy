@@ -8,9 +8,12 @@ export function CtaBand() {
         </h3>
         <div className="cta-actions">
           <a href="#contact" className="btn btn-gold">Book free consultation</a>
-          <a href="tel:+9779800000000" className="btn btn-outline"
-            >Call +977 98-0000-0000</a
-          >
+          <a href="tel:+97711664371" className="btn btn-outline">
+            +977-11-664371
+          </a>
+          <a href="tel:+97711665623" className="btn btn-outline">
+            +977-11-665623
+          </a>
         </div>
       </div>
     </section>
