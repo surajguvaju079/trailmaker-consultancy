@@ -148,10 +148,11 @@ export function Hero() {
               <text x="370" y="60" textAnchor="middle" style={{ fontSize: "12px" }}>
                 ✈
               </text>
+              <text className="trail-label" x="300" y="30" style={{ fontWeight: 700 }}>
+                Destination
+              </text>
+
             </g>
-            <text className="trail-label" x="300" y="30" style={{ fontWeight: 700 }}>
-              Destination
-            </text>
           </svg>
         </div>
       </div>

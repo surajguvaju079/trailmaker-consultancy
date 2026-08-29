@@ -377,13 +377,15 @@ header {
   font-family: "Poppins";
   font-weight: 700;
   font-size: 11px;
-  fill: #0e0e16;
+
+  fill:#ffffff;
 }
 
 .trail-label {
   font-family: "Inter";
   font-weight: 600;
   font-size: 12px;
+  
   fill: rgba(255, 255, 255, 0.78);
 }
 

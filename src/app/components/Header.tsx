@@ -16,14 +16,14 @@ export function Header() {
           <img
             src="/logo.jpeg"
             alt="Trailmaker logo"
-            width={42}
+            width={126}
             height={42}
             style={{ display: "block" }}
           />
-          <span className="brand-word">
-            <span className="t1">Trail<span>maker</span></span>
-            <span className="t2">Trailmaker Consultancy</span>
-          </span>
+          {/* <span className="brand-word"> */}
+          {/*   <span className="t1">Trail<span>maker</span></span> */}
+          {/*   <span className="t2">Trailmaker Consultancy</span> */}
+          {/* </span> */}
         </a>
         <div className="navlinks" id="navlinks">
           <a href="#services">Services</a>
@@ -31,7 +31,6 @@ export function Header() {
           <a href="#destinations">Destinations</a>
           <a href="#why">Why Us</a>
           <a href="#testimonials">Stories</a>
-          <a href="#contact">Contact</a>
         </div>
         <div className="navcta">
           <a

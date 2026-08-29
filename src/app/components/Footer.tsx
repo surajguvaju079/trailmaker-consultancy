@@ -5,26 +5,6 @@ export function Footer() {
         <div className="foot-grid">
           <div className="foot-brand">
             <div className="brand">
-              <svg
-                width="34"
-                height="34"
-                viewBox="0 0 100 100"
-                aria-hidden="true"
-              >
-                <path
-                  d="M50 12 A40 40 0 0 1 50 92 A20 20 0 0 1 50 52 A20 20 0 0 0 50 12Z"
-                  fill="#d6274f"
-                />
-                <path
-                  d="M50 12 A40 40 0 0 1 90 52 A40 40 0 0 1 50 92 A20 20 0 0 0 50 52 A20 20 0 0 0 50 12Z"
-                  fill="#33a95c"
-                />
-                <circle cx="50" cy="58" r="9" fill="#f2b807" />
-                <path
-                  d="M50 66 C42 66 34 74 32 84 C40 88 46 86 50 78 C54 86 60 88 68 84 C66 74 58 66 50 66Z"
-                  fill="#1d9fd8"
-                />
-              </svg>
               <span className="t1">Trail<span className="t2">maker</span></span>
             </div>
             <p>
