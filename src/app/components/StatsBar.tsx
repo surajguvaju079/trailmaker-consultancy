@@ -1,11 +1,20 @@
+const STATS = [
+  { title: "Personalized", body: "Guidance" },
+  { title: "Multiple", body: "Destinations" },
+  { title: "Step-by-step", body: "Application support" },
+  { title: "Beyond", body: "Visa assistance" },
+];
+
 export function StatsBar() {
   return (
     <div className="stats-bar">
       <div className="wrap stats-inner">
-        <div><span>Years of experience</span></div>
-        <div><span>University partners</span></div>
-        <div><span>Destinations reached</span></div>
-        <div><span>Advisors on our team</span></div>
+        {STATS.map((s, i) => (
+          <div key={i} className="stat-block">
+            <b>{s.title}</b>
+            <span>{s.body}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

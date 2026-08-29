@@ -434,12 +434,12 @@ header {
 
 /* ---------- SECTION GENERIC ---------- */
 section {
-  padding: 104px 0;
+  padding: clamp(48px, 4vw, 104px) 0;
 }
 
 .section-head {
   max-width: 640px;
-  margin-bottom: 56px;
+  margin-bottom: clamp(24px, 2vw, 56px);
 }
 
 .section-head h2 {
@@ -808,6 +808,86 @@ section {
   color: rgba(255, 255, 255, 0.55);
 }
 
+/* ---------- FAQ ---------- */
+#faq {
+  background: var(--paper);
+}
+
+.faq-list {
+  max-width: 760px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+  background: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: var(--crimson);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--ink);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.faq-question:hover .faq-icon {
+  border-color: var(--crimson);
+  color: var(--crimson);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding: 0 0;
+}
+
+.faq-answer.open {
+  max-height: 400px;
+  padding: 8px 0 22px;
+}
+
+.faq-answer p {
+  color: #5a5a63;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.faq-answer a {
+  color: var(--sky);
+  text-decoration: underline;
+}
+
+.faq-answer strong {
+  color: var(--ink);
+}
+
 /* ---------- TESTIMONIALS ---------- */
 .tgrid {
   display: grid;
@@ -821,12 +901,15 @@ section {
   border-radius: var(--radius);
   padding: 28px;
   box-shadow: 0 8px 30px -18px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .tcard .stars {
   color: var(--gold);
   font-size: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 4px;
   letter-spacing: 2px;
 }
 
@@ -834,7 +917,7 @@ section {
   font-size: 14.5px;
   color: #4c4c54;
   line-height: 1.65;
-  margin-bottom: 20px;
+  flex: 1;
 }
 
 .tcard .who {
@@ -852,6 +935,24 @@ section {
 .tcard .who span {
   font-size: 12px;
   color: #8a8a90;
+}
+
+/* ---------- DEMO LABEL ---------- */
+.demo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: "Inter";
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(242, 184, 7, 0.14);
+  color: #8a6a00;
+  border: 1px solid rgba(242, 184, 7, 0.3);
+  margin-bottom: 18px;
 }
 
 /* ---------- CTA BAND ---------- */
@@ -1006,11 +1107,17 @@ footer {
   border-right: none;
 }
 
-.stats-inner b {
+.stat-block b {
   font-family: "Poppins";
   font-weight: 800;
   font-size: 30px;
   display: block;
+}
+
+.stat-block span {
+  font-size: 12.5px;
+  color: #77777d;
+  letter-spacing: 0.03em;
 }
 
 .stats-inner div:nth-child(1) b {
@@ -1027,12 +1134,6 @@ footer {
 
 .stats-inner div:nth-child(4) b {
   color: var(--sky);
-}
-
-.stats-inner span {
-  font-size: 12.5px;
-  color: #77777d;
-  letter-spacing: 0.03em;
 }
 
 /* ---------- RESPONSIVE ---------- */

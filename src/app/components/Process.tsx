@@ -23,7 +23,7 @@ export function Process() {
               y1="30"
               x2="960"
               y2="30"
-              stroke="rgba(255,255,255,.18)"
+              stroke="#666"
               strokeWidth="2"
               strokeDasharray="2 10"
               strokeLinecap="round"
@@ -65,7 +65,7 @@ export function Process() {
             <div className="pstep">
               <div className="num">5</div>
               <h4>Depart</h4>
-<p>
+              <p>
                 Pre-departure briefing, airport pickup partner, and check-ins
                 abroad.
               </p>
