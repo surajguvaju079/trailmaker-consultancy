@@ -7,7 +7,7 @@ export function CtaBand() {
           free.
         </h3>
         <div className="cta-actions">
-          <a href="#contact" className="btn btn-gold">Book free consultation</a>
+          <a href="#consultation" className="btn btn-gold">Book free consultation</a>
           <a href="tel:+97711664371" className="btn btn-outline">
             +977-11-664371
           </a>

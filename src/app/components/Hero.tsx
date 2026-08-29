@@ -89,19 +89,8 @@ export function Hero() {
             before.
           </p>
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-gold">Book a free consultation</a>
+            <a href="#consultation" className="btn btn-gold">Book a free consultation</a>
             <a href="#process" className="btn btn-outline">See how it works</a>
-          </div>
-          <div className="hero-stats">
-            <div className="hstat">
-              <b id="cnt-students">0</b><span>Students placed</span>
-            </div>
-            <div className="hstat">
-              <b id="cnt-countries">0</b><span>Partner countries</span>
-            </div>
-            <div className="hstat">
-              <b id="cnt-rate">0%</b><span>Visa success rate</span>
-            </div>
           </div>
         </div>
         <div className="hero-visual">

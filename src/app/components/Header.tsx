@@ -40,13 +40,13 @@ export function Header() {
           >
             Contact
           </a>
-          <a
-            href="#contact"
-            className="btn btn-gold"
-            style={{ padding: "11px 22px", fontSize: "13.5px" }}
-          >
-            Book Free Consultation
-          </a>
+<a
+              href="#consultation"
+              className="btn btn-gold"
+              style={{ padding: "11px 22px", fontSize: "13.5px" }}
+            >
+              Book Free Consultation
+            </a>
           <button
             className="burger"
             id="burger"
