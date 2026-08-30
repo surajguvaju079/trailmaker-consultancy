@@ -99,9 +99,11 @@ export function Header() {
             alt="Trailmaker icon"
             className="nav-logo"
             style={{
-              width: "36px",
-              height: "36px",
+              width: "40px",
+              height: "40px",
               objectFit: "contain",
+
+              borderRadius: "44px"
             }}
           />
         </a>
