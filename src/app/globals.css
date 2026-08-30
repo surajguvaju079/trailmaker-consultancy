@@ -140,19 +140,19 @@ button {
 
 /* ---------- NAV ---------- */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(14, 14, 22, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+  
+
+ background: rgba(14, 14, 22, 0.72); 
+
+
   transition: background 0.3s ease;
 }
 
 .nav {
+   background: rgba(14, 14, 22, 0.72); 
+
+
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1597,5 +1597,95 @@ footer {
   .contact-link {
     display: block;
     margin-bottom: 8px;
+  }
+}
+
+/* ---------- FIXED LOGO BAR ---------- */
+.logo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+  transition: padding 0.3s ease;
+}
+
+.brand-logo {
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  object-fit: contain;
+  width: auto;
+}
+
+@media (max-width: 980px) {
+  .brand-logo {
+    height: 34px;
+  }
+}
+
+/* Hide/show navbar on scroll */
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}
+
+/* Account for fixed header in content spacing */
+@media (min-width: 981px) {
+  .main-content {
+    padding-top: 80px;
+  }
+}
+
+/* Reduce spacing on mobile */
+@media (max-width: 980px) {
+  .main-content {
+    padding-top: 64px;
+  }
+}
+
+/* ---------- FIXED LOGO BAR ---------- */
+.logo-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+}
+
+.logo-bar .brand-logo {
+  display: block;
+  margin: 0 auto;
+  height: 40px;
+  object-fit: contain;
+  width: auto;
+}
+
+@media (max-width: 980px) {
+  .logo-bar .brand-logo {
+    height: 34px;
+  }
+}
+
+/* Account for fixed header in content spacing */
+@media (min-width: 981px) {
+  .main {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 980px) {
+  .main {
+    padding-top: 64px;
   }
 }
