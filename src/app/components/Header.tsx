@@ -95,7 +95,7 @@ export function Header() {
         <a href="#top" className="brand" onClick={closeMenu}>
 
           <img
-            src="/icon.png"
+            src="/nav_logo.jpeg"
             alt="Trailmaker icon"
             className="nav-logo"
             style={{
