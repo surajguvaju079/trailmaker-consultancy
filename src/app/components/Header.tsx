@@ -116,7 +116,7 @@ export function Header() {
         </div>
 
         <div className="navcta">
-          <a href="#consultation" className="btn btn-outline header-consultation">
+          <a href="#consultation" className="btn btn-outline">
             Contact
           </a>
           <a href="#consultation" className="btn btn-gold header-consultation">
