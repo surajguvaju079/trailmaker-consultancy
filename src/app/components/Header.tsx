@@ -13,21 +13,10 @@ const LINKS = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => setIsMenuOpen((v) => !v);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Close on outside click
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        closeMenu();
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   // Close on Escape
   useEffect(() => {
@@ -50,9 +39,8 @@ export function Header() {
           <img
             src="/logo.jpeg"
             alt="Trailmaker logo"
-            width={126}
-            height={42}
-            style={{ display: "block" }}
+
+            className="brand-logo"
           />
         </a>
 
@@ -65,10 +53,10 @@ export function Header() {
         </div>
 
         <div className="navcta">
-          <a href="#consultation" className="btn btn-outline">
+          <a href="#consultation" className="btn btn-outline header-consultation">
             Contact
           </a>
-          <a href="#consultation" className="btn btn-gold">
+          <a href="#consultation" className="btn btn-gold header-consultation">
             Book Free Consultation
           </a>
           <button
@@ -87,7 +75,7 @@ export function Header() {
 
       <div
         id="mobileMenu"
-        ref={menuRef}
+
         className={`mobile-menu${isMenuOpen ? " open" : ""}`}
         role="dialog"
         aria-modal="true"
