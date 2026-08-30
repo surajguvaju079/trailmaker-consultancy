@@ -94,15 +94,6 @@ export function Header() {
         aria-label="Main navigation"
         aria-hidden={!isMenuOpen}
       >
-        <button
-          type="button"
-          className="mobile-menu-close"
-          onClick={closeMenu}
-          aria-label="Close menu"
-        >
-          ✕
-        </button>
-
         {LINKS.map((link) => (
           <a
             key={link.href}

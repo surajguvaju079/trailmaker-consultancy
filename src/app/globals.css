@@ -805,15 +805,31 @@ section {
   transform: translateY(-6px) scale(1.02);
 }
 
+.dest-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+
+.dest-card:hover img {
+  transform: scale(1.07);
+}
+
 .dest-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45), transparent 55%);
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.05) 55%);
 }
 
 .dest-card span {
   position: relative;
+  z-index: 2;
   font-family: "Poppins";
   font-weight: 700;
   font-size: 14px;
@@ -821,6 +837,7 @@ section {
 
 .dest-card small {
   position: relative;
+  z-index: 2;
   display: block;
   font-size: 10.5px;
   opacity: 0.8;
