@@ -25,6 +25,8 @@ const DESTINATIONS = [
   "United States",
   "Japan",
   "South Korea",
+  "Cyprus",
+  "Malta",
   "Other",
 ];
 
