@@ -6,7 +6,7 @@ export function LocationMap() {
           <span className="eyebrow">Visit us</span>
           <h2>Trailmaker Edu Consultancy Banepa</h2>
           <p>
-            Banepa, Chandanichowk, Kavre, Nepal. Drop by for a free counseling
+            Banepa, Tindobato -8, next to Sanima Bank. Drop by for a free counseling
             session — we will walk you through the trail from the first visit.
           </p>
         </div>

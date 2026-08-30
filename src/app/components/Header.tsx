@@ -80,20 +80,16 @@ export function Header() {
           style={{
             display: "block",
             margin: "0 auto",
-            height: "30px",
+            height: "50px",
             objectFit: "contain",
-            width: "120px",
+            width: "auto",
           }}
         />
-        <div style={{
-
-        }}>
-          Trailmaker Educational Consultancy</div>
 
       </div>
 
       <nav className="nav" style={{
-        marginTop: "50px",
+        marginTop: "70px",
         transition: "margin-top 0.3s ease"
       }}>
         <a href="#top" className="brand" onClick={closeMenu}>
@@ -103,14 +99,15 @@ export function Header() {
             alt="Trailmaker icon"
             className="nav-logo"
             style={{
-              width: "28px",
-              height: "28px",
+              width: "36px",
+              height: "36px",
               objectFit: "contain",
             }}
           />
         </a>
 
         <div className="navlinks" id="navlinks">
+
           {LINKS.map((link) => (
             <a key={link.href} href={link.href}>
               {link.label}
@@ -119,10 +116,10 @@ export function Header() {
         </div>
 
         <div className="navcta">
-          <a href="#consultation" className="btn btn-outline">
+          <a href="#consultation" className="btn btn-outline header-consultation">
             Contact
           </a>
-          <a href="#consultation" className="btn btn-gold">
+          <a href="#consultation" className="btn btn-gold header-consultation">
             Book Free Consultation
           </a>
           <button
