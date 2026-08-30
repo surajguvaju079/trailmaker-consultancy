@@ -167,32 +167,18 @@ header {
   gap: 11px;
 }
 
-.brand-word {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
+.brand-logo {
+  display: block;
+  width: 126px;
+  height: 42px;
+  object-fit: contain;
 }
 
-.brand-word .t1 {
-  font-family: "Poppins";
-  font-weight: 800;
-  font-size: 19px;
-  color: #fff;
-  letter-spacing: -0.01em;
-}
-
-.brand-word .t1 span {
-  color: var(--sky);
-}
-
-.brand-word .t2 {
-  font-family: "Inter";
-  font-weight: 600;
-  font-size: 9.5px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 3px;
+@media (max-width: 980px) {
+  .brand-logo {
+    width: 100px;
+    height: 34px;
+  }
 }
 
 .navlinks {
@@ -1580,6 +1566,15 @@ footer {
   gap: 14px;
   margin-top: 24px;
   flex-wrap: wrap;
+}
+.header-consultation {
+  display: inline-flex;
+}
+
+@media (max-width: 980px) {
+  .header-consultation {
+    display: none;
+  }
 }
 
 /* ---------- RESPONSIVE ---------- */
