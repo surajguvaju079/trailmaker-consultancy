@@ -4,10 +4,10 @@ export function TestPreparation() {
       <div className="wrap">
         <div className="section-head reveal">
           <span className="eyebrow">Test preparation</span>
-          <h2>Ace your English and admission tests.</h2>
+          <h2>Prepare With Purpose</h2>
           <p>
-            Small-batch classes and one-to-one coaching with mock tests, taught by
-            trainers who track your score weekly and focus on your weaker areas.
+            From English language tests to Japanese and Korea-focused preparation,
+            get the guidance and practice you need before taking your next step.
           </p>
         </div>
         <div className="tgrid reveal">
@@ -35,35 +35,58 @@ export function TestPreparation() {
               sections with score improvement techniques.
             </p>
           </div>
+          <div className="tcard">
+            <div className="stars">★★★★★</div>
+            <h3>JLPT N5 / N4</h3>
+            <p>
+              Japanese language preparation for students planning to pursue study
+              opportunities in Japan, with foundational N5 and N4 level learning.
+            </p>
+          </div>
+          <div className="tcard">
+            <div className="stars">★★★★★</div>
+            <h3>Korea Preparation</h3>
+            <p>
+              Guidance and foundational preparation for students planning to
+              pursue study opportunities in South Korea.
+            </p>
+          </div>
         </div>
         <div className="reveal">
           <div className="psteps" style={{ gridTemplateColumns: "1fr 1fr", gap: "18px" }}>
             <div className="pstep">
               <div className="num">1</div>
-              <h4>Assessment</h4>
+              <h4>Assess</h4>
               <p>
                 Understand your current level with a diagnostic test.
               </p>
             </div>
             <div className="pstep">
               <div className="num">2</div>
-              <h4>Target Setting</h4>
+              <h4>Prepare</h4>
               <p>
-                Identify the score you need for your target universities.
+                Focused classes and practice targeted to your goals.
               </p>
             </div>
             <div className="pstep">
               <div className="num">3</div>
-              <h4>Personalized Prep</h4>
+              <h4>Practice</h4>
               <p>
-                Focus on your weaker areas with customized study plans.
+                Simulated tests and targeted skill-building exercises.
               </p>
             </div>
             <div className="pstep">
               <div className="num">4</div>
-              <h4>Practice Tests</h4>
+              <h4>Improve</h4>
               <p>
-                Simulate the real exam experience with timed mock tests.
+                Review weak areas and refine test technique.
+              </p>
+            </div>
+            <div className="pstep">
+              <div className="num">5</div>
+              <h4>Test</h4>
+              <p>
+                Sit your exam with confidence, prepared by the process.
               </p>
             </div>
           </div>

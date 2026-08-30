@@ -22,7 +22,7 @@ export function StudentJourney() {
               y1="30"
               x2="960"
               y2="30"
-              stroke="rgba(255,255,255,.18)"
+              stroke="#666"
               strokeWidth="2"
               strokeDasharray="2 10"
               strokeLinecap="round"

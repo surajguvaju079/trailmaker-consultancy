@@ -11,7 +11,9 @@ import { Testimonials } from "./components/Testimonials";
 import { TestPreparation } from "./components/TestPreparation";
 import { ScholarshipGuidance } from "./components/ScholarshipGuidance";
 import { PreDeparture } from "./components/PreDeparture";
+import { FAQ } from "./components/FAQ";
 import { LocationMap } from "./components/LocationMap";
+import { ConsultationForm } from "./components/ConsultationForm";
 import { CtaBand } from "./components/CtaBand";
 import { Footer } from "./components/Footer";
 import { StudentJourney } from "./components/StudentJourney";
@@ -32,6 +34,8 @@ export default function Home() {
       <TestPreparation />
       <ScholarshipGuidance />
       <PreDeparture />
+      <FAQ />
+      <ConsultationForm />
       <LocationMap />
       <CtaBand />
       <Footer />
