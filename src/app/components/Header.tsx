@@ -1,43 +1,52 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const LINKS = [
+  { href: "#top", label: "Home" },
+  { href: "#services", label: "Services" },
+  { href: "#destinations", label: "Destinations" },
+  { href: "#process", label: "Your Trail" },
+  { href: "#why", label: "Why Us" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  const toggleMenu = () => setIsMenuOpen((v) => !v);
   const closeMenu = () => setIsMenuOpen(false);
 
+  // Close on outside click
   useEffect(() => {
-    // Close menu on outside click
     const handleClickOutside = (event: MouseEvent) => {
-      if (!event.target.closest("header")) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Close on Escape
   useEffect(() => {
-    // Close menu on Escape key
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closeMenu();
-      }
+      if (event.key === "Escape") closeMenu();
     };
     document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  // Body scroll lock
+  useEffect(() => {
+    document.documentElement.style.overflow = isMenuOpen ? "hidden" : "";
+  }, [isMenuOpen]);
 
   return (
     <header>
       <nav className="nav">
-        <a href="#top" className="brand">
+        <a href="#top" className="brand" onClick={closeMenu}>
           <img
             src="/logo.jpeg"
             alt="Trailmaker logo"
@@ -46,83 +55,84 @@ export function Header() {
             style={{ display: "block" }}
           />
         </a>
-        <div className="navlinks" id="navlinks">
-          <a href="#services">Services</a>
-          <a href="#process">Your Trail</a>
-          <a href="#destinations">Destinations</a>
-          <a href="#why">Why Us</a>
-          <a href="#faq">FAQ</a>
 
+        <div className="navlinks" id="navlinks">
+          {LINKS.slice(1).map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </div>
+
         <div className="navcta">
-          <a
-            href="#consultation"
-            className="btn btn-outline"
-            style={{ padding: "11px 20px", fontSize: "13.5px" }}
-          >
+          <a href="#consultation" className="btn btn-outline">
             Contact
           </a>
-          <a
-            href="#consultation"
-            className="btn btn-gold"
-            style={{ padding: "11px 22px", fontSize: "13.5px" }}
-          >
+          <a href="#consultation" className="btn btn-gold">
             Book Free Consultation
           </a>
           <button
-            className="burger"
-            id="burger"
+            className={`burger${isMenuOpen ? " active" : ""}`}
             aria-label="Menu"
-            onClick={toggleMenu}
             aria-expanded={isMenuOpen}
-            aria-controls="navlinks"
+            aria-controls="mobileMenu"
+            onClick={toggleMenu}
           >
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </nav>
-      {isMenuOpen && (
-        <div
-          className="mobile-menu"
-          role="menu"
-          aria-modal="true"
+
+      <div
+        id="mobileMenu"
+        ref={menuRef}
+        className={`mobile-menu${isMenuOpen ? " open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Main navigation"
+        aria-hidden={!isMenuOpen}
+      >
+        <button
+          type="button"
+          className="mobile-menu-close"
           onClick={closeMenu}
+          aria-label="Close menu"
         >
-          <button
-            type="button"
-            className="mobile-menu-close"
+          ✕
+        </button>
+
+        {LINKS.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="mobile-menu-item"
             onClick={closeMenu}
-            aria-label="Close menu"
           >
-            ✕
-          </button>
-          <a href="#top" className="mobile-menu-item">
-            Home
+            {link.label}
           </a>
-          <a href="#services" className="mobile-menu-item">
-            Services
-          </a>
-          <a href="#destinations" className="mobile-menu-item">
-            Destinations
-          </a>
-          <a href="#process" className="mobile-menu-item">
-            Your Trail
-          </a>
-          <a href="#why" className="mobile-menu-item">
-            Why Us
-          </a>
-          <a href="#faq" className="mobile-menu-item">
-            FAQ
-          </a>
-          <a href="#consultation" className="mobile-menu-item">
-            Book a Consultation
-          </a>
-          <span className="mobile-menu-divider" />
-          <a href="#contact" className="mobile-menu-item">
+        ))}
+
+        <span className="mobile-menu-divider" />
+
+        <div className="mobile-menu-cta">
+          <a
+            href="#consultation"
+            className="btn btn-outline btn-block"
+            onClick={closeMenu}
+          >
             Contact
           </a>
+          <a
+            href="#consultation"
+            className="btn btn-gold btn-block"
+            onClick={closeMenu}
+          >
+            Book Free Consultation
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
