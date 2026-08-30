@@ -47,6 +47,20 @@ export function Destinations() {
       img: "https://images.unsplash.com/photo-1566800890932-e89159daf3dc?w=800&q=70&auto=format&fit=crop",
       credit: "Adish (AJ)",
     },
+    {
+      name: "Malta",
+      c1: "#d6274f",
+      c2: "#7a1230",
+      img: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800&q=70&auto=format&fit=crop",
+      credit: "Unsplash",
+    },
+    {
+      name: "Cyprus",
+      c1: "#f2b807",
+      c2: "#7a5c03",
+      img: "https://images.unsplash.com/photo-1578922746465-3a80a228f223?w=800&q=70&auto=format&fit=crop",
+      credit: "Unsplash",
+    },
   ];
 
   return (
