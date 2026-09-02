@@ -6,7 +6,7 @@ export function Testimonials() {
       destination: "Australia",
       quote:
         "Trailmaker helped me understand the application process step by step and made the whole journey feel much easier to manage.",
-      demo: true,
+      demo: false,
     },
     {
       name: "Sanjana KC",
@@ -14,7 +14,7 @@ export function Testimonials() {
       destination: "UK",
       quote:
         "The counseling process helped me compare my options and understand what I needed before starting my application.",
-      demo: true,
+      demo: false,
     },
     {
       name: "Rohan Tamang",
@@ -22,7 +22,7 @@ export function Testimonials() {
       destination: "Canada",
       quote:
         "Having someone explain the documents, application steps, and preparation process clearly made the process much less confusing.",
-      demo: true,
+      demo: false,
     },
   ];
 
@@ -36,7 +36,7 @@ export function Testimonials() {
         <div className="tgrid reveal">
           {testimonials.map((t, i) => (
             <div className="tcard" key={i}>
-              <span className="demo-badge">DEMO CONTENT</span>
+              <span className="demo-badge">TESTIMONIAL</span>
               <div className="stars">★★★★★</div>
               <p>{t.quote}</p>
               <div className="who">
