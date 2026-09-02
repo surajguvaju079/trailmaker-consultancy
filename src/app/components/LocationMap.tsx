@@ -34,7 +34,7 @@ export function LocationMap() {
           <a href="tel:+97711664371" className="btn btn-outline">
             Call 011-664371
           </a>
-          <a href="mailto:banepatrailmaker@gmail.com" className="btn btn-outline">
+          <a href="mailto:info@trailmakerchadanichowk.com.np" className="btn btn-outline">
             Email Us
           </a>
         </div>

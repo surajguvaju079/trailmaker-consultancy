@@ -73,6 +73,8 @@ export function Footer() {
             <a href="tel:+97711664371">011-664371</a>
             <a href="tel:+97711665623">011-665623</a>
             <a href="mailto:banepatrailmaker@gmail.com">banepatrailmaker@gmail.com</a>
+            <a href="mailto:info@trailmakerchadanichowk.com.np">info@trailmakerchadanichowk.com.np</a>
+
             <a
               href="https://www.google.com/maps/search/?api=1&query=travel+consultancy+Banepa+Chandanichowk+Kavre+Nepal"
               target="_blank"
