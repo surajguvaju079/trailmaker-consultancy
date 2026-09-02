@@ -90,6 +90,11 @@ const FAQS = [
         <a href="mailto:banepatrailmaker@gmail.com">
           banepatrailmaker@gmail.com
         </a>
+        {" "}
+        <a href="mailto:info@trailmakerchadanichowk.com.np">
+          info@trailmakerchadanichowk.com.np
+        </a>
+
       </>
     ),
   },

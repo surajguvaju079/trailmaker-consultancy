@@ -124,7 +124,7 @@ export function ConsultationForm() {
     } catch (error) {
       setStatus("error");
       setStatusMessage(
-        "Something went wrong while sending your request. Please try again or contact us directly at banepatrailmaker@gmail.com or call 011-664371 / 011-665623."
+        "Something went wrong while sending your request. Please try again or contact us directly at info@trailmakerchadanichowk.com.np or call 011-664371 / 011-665623."
       );
       console.log(error)
     } finally {
@@ -162,6 +162,13 @@ export function ConsultationForm() {
             >
               banepatrailmaker@gmail.com
             </a>
+            <a
+              href="mailto:info@trailmakerchadanichowk.com.np"
+              className="contact-link"
+            >
+              info@trailmakerchadanichowk.com.np
+            </a>
+
           </div>
         </div>
 
